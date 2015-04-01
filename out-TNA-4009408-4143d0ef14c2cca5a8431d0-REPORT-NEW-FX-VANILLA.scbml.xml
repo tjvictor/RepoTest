@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCBML xmlns="http://www.sc.com/SCBML-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:conf="http://www.fpml.org/FpML-5/confirmation">
+	<header>
+		<messageDetails>
+			<messageVersion>1.0</messageVersion>
+			<messageType>
+				<typeName>FM:ECLIPSE:INTERMEDIATION</typeName>
+				<subType>
+					<subTypeName>clearingConfirmed</subTypeName>
+				</subType>
+			</messageType>
+		</messageDetails>
+		<originationDetails>
+			<messageSender>
+				<messageSender>FUTURELANDSCAPE</messageSender>
+				<senderDomain>
+					<domainName>FM</domainName>
+					<subDomainName>
+						<subDomainType>ECLIPSE</subDomainType>
+					</subDomainName>
+				</senderDomain>
+				<countryCode>UK</countryCode>
+			</messageSender>
+			<messageTimestamp>2015-03-20T03:56:45</messageTimestamp>
+			<initiatedTimestamp>2015-03-20T03:56:45Z</initiatedTimestamp>
+			<trackingId>TNA-4009408-4143d0ef14c2cca5a8431d0-REPORT-NEW-FX-VANILLA</trackingId>
+			<possibleDuplicate>false</possibleDuplicate>
+		</originationDetails>
+		<captureSystem>TRAIANATRM</captureSystem>
+		<process>
+			<processName>TraianaFXIntermediation</processName>
+			<eventType>Notify</eventType>
+			<workflowState>ClearingConfirmed</workflowState>
+		</process>
+	</header>
+	<payload>
+		<payloadFormat>XML</payloadFormat>
+		<payloadVersion>SCBML2.3-FMPAYLOAD2.1</payloadVersion>
+		<FPMLMessagingPayload>
+			<header>
+				<process>
+					<event>TradePrimeBrokered</event>
+					<eventId>ClearingConfirmed</eventId>
+				</process>
+				<product>
+					<id>ForeignExchange:VanillaOption</id>
+				</product>
+			</header>
+			<message xsi:type="conf:ClearingConfirmed" fpmlVersion="5-5">
+				<conf:header>
+					<conf:messageId messageIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-message-id">TNA-4009408-4143d0ef14c2cca5a8431d0-REPORT-NEW-FX-VANILLA</conf:messageId>
+					<conf:sentBy messageAddressScheme="http://www.sc.com/coding-schemes/eclipse1/affirmation-platform">TRM</conf:sentBy>
+					<conf:sendTo messageAddressScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-party-id">SCB</conf:sendTo>
+					<conf:creationTimestamp>2015-03-20T03:56:45</conf:creationTimestamp>
+				</conf:header>
+				<conf:trade>
+					<conf:tradeHeader>
+						<conf:partyTradeIdentifier>
+							<conf:partyReference href="ExecutingBroker"/>
+							<conf:tradeId tradeIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-trade-id">TRM-SCB_4009404</conf:tradeId>
+						</conf:partyTradeIdentifier>
+						<conf:partyTradeIdentifier>
+							<conf:partyReference href="Client"/>
+							<conf:tradeId tradeIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-trade-id">TRM-SCB_4009403</conf:tradeId>
+						</conf:partyTradeIdentifier>
+						<conf:partyTradeIdentifier>
+							<conf:partyReference href="PrimeBroker"/>
+							<conf:tradeId tradeIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-trade-id">4009404</conf:tradeId>
+						</conf:partyTradeIdentifier>
+						<conf:partyTradeIdentifier>
+							<conf:partyReference href="Traiana"/>
+							<conf:tradeId tradeIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-trade-id">4009408</conf:tradeId>
+						</conf:partyTradeIdentifier>
+						<conf:partyTradeInformation>
+							<conf:partyReference href="PrimeBroker"/>
+							<conf:relatedParty>
+								<conf:partyReference href="PrimeBroker"/>
+								<conf:role partyRoleScheme="http://www.fpml.org/coding-scheme/party-role">PrimeBroker</conf:role>
+							</conf:relatedParty>
+							<conf:relatedParty>
+								<conf:partyReference href="Traiana"/>
+								<conf:role partyRoleScheme="http://www.fpml.org/coding-scheme/party-role">TradeSource</conf:role>
+							</conf:relatedParty>
+							<conf:relatedParty>
+								<conf:partyReference href="Client"/>
+								<conf:role partyRoleScheme="http://www.fpml.org/coding-scheme/party-role">Counterparty</conf:role>
+							</conf:relatedParty>
+							<conf:relatedParty>
+								<conf:partyReference href="ExecutingBroker"/>
+								<conf:role partyRoleScheme="http://www.fpml.org/coding-scheme/party-role">ExecutingBroker</conf:role>
+							</conf:relatedParty>
+						</conf:partyTradeInformation>
+						<conf:tradeDate>2014-06-12</conf:tradeDate>
+					</conf:tradeHeader>
+					<conf:fxOption>
+						<conf:primaryAssetClass>ForeignExchange</conf:primaryAssetClass>
+						<conf:secondaryAssetClass>ForeignExchange</conf:secondaryAssetClass>
+						<conf:productId productIdScheme="http://www.fpml.org/coding-scheme/product-taxonomy">ForeignExchange:VanillaOption</conf:productId>
+						<conf:buyerPartyReference href="ExecutingBroker"/>
+						<conf:sellerPartyReference href="PrimeBroker"/>
+						<conf:effectiveDate>
+							<conf:adjustableDate>
+								<conf:unadjustedDate>2015-03-31</conf:unadjustedDate>
+								<conf:dateAdjustments>
+									<conf:businessDayConvention>NotApplicable</conf:businessDayConvention>
+								</conf:dateAdjustments>
+							</conf:adjustableDate>
+						</conf:effectiveDate>
+						<conf:europeanExercise>
+							<conf:expiryDate>2015-03-30</conf:expiryDate>
+							<conf:expiryTime>
+								<conf:hourMinuteTime>10:00:00</conf:hourMinuteTime>
+								<conf:businessCenter>New York</conf:businessCenter>
+							</conf:expiryTime>
+							<conf:cutName>New York</conf:cutName>
+							<conf:valueDate>2015-03-31</conf:valueDate>
+						</conf:europeanExercise>
+						<conf:putCurrencyAmount>
+							<conf:currency>USD</conf:currency>
+							<conf:amount>300000000</conf:amount>
+						</conf:putCurrencyAmount>
+						<conf:callCurrencyAmount>
+							<conf:currency>EUR</conf:currency>
+							<conf:amount>200000000</conf:amount>
+						</conf:callCurrencyAmount>
+						<conf:soldAs>Call</conf:soldAs>
+						<conf:strike>
+							<conf:rate>1.5</conf:rate>
+							<conf:strikeQuoteBasis>CallCurrencyPerPutCurrency</conf:strikeQuoteBasis>
+						</conf:strike>
+						<conf:premium>
+							<conf:payerPartyReference href="ExecutingBroker"/>
+							<conf:receiverPartyReference href="PrimeBroker"/>
+							<conf:paymentDate>
+								<conf:adjustableDate>
+									<conf:unadjustedDate>2015-03-23</conf:unadjustedDate>
+									<conf:dateAdjustments>
+										<conf:businessDayConvention>NotApplicable</conf:businessDayConvention>
+									</conf:dateAdjustments>
+								</conf:adjustableDate>
+							</conf:paymentDate>
+							<conf:paymentAmount>
+								<conf:currency>EUR</conf:currency>
+								<conf:amount>4000000</conf:amount>
+							</conf:paymentAmount>
+						</conf:premium>
+					</conf:fxOption>
+				</conf:trade>
+				<conf:party id="ExecutingBroker">
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-party-id">SCB London PLC</conf:partyId>
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-scheme/party-id/sci-id">13352245</conf:partyId>
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-scheme/party-id/fm-id">400626671</conf:partyId>
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-scheme/party-id/murex-id">G712432/LDN</conf:partyId>
+					<conf:partyName>SCB London PLC</conf:partyName>
+				</conf:party>
+				<conf:party id="Client">
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-party-id">Test Client1</conf:partyId>
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-scheme/party-id/sci-id">11074143</conf:partyId>
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-scheme/party-id/fm-id">300011128</conf:partyId>
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-scheme/party-id/murex-id">CMB/LDN</conf:partyId>
+					<conf:partyName>Test Client1</conf:partyName>
+				</conf:party>
+				<conf:party id="PrimeBroker">
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-schemes/eclipse1/TRAIANATRM-party-id">Primary Org</conf:partyId>
+					<conf:partyName>Primary Org</conf:partyName>
+				</conf:party>
+				<conf:party id="Traiana">
+					<conf:partyId partyIdScheme="http://www.sc.com/coding-schemes/eclipse1/affirmation-platform">Traiana</conf:partyId>
+					<conf:partyName>Traiana</conf:partyName>
+				</conf:party>
+			</message>
+		</FPMLMessagingPayload>
+	</payload>
+</SCBML>
